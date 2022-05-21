@@ -8,7 +8,7 @@ import Button from '../elements/button'
 const Contact = () => {
     const {contact, openContact} = useContext(DataContext)
   return (
-    <div className={`fixed contact z-20 inset-0 overflow-y-auto h-full w-full ${contact ? 'block' : 'hidden'}`}>
+    <div className={`fixed glass-blur z-20 inset-0 overflow-y-auto h-full w-full ${contact ? 'block' : 'hidden'}`}>
         <div className="relative float-right inset-y-0 py-24 px-5 lg:px-16 w-4/5 md:w-1/2 shadow-lg bg-gradient-to-b from-[#210045] to-[#0C0123]">
             <h2 className='text-2xl md:text-3xl text-white font-semibold'>
                 Hey, we are still in the works, but you can send us a message!
