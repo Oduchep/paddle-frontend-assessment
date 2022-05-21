@@ -4,6 +4,7 @@ import Input from '../components/elements/input';
 import Button from '../components/elements/button'
 import Footer from '../components/sections/footer'
 import CountdownTimer from '../components/widgets/countdown-timer/countdown-timer';
+import Contact from '../components/sections/contact';
 
 const ComingSoon = () => {
     const SEVEN_DAYS_IN_MS = 8 * 24 * 60 * 60 * 1000;
@@ -19,16 +20,16 @@ const ComingSoon = () => {
           <link rel="icon" href="/favicon.ico" />
         </Head>
   
-        <section className='relative w-full lg:w-[790px] mx-auto text-white text-center z-[100]'>
+        <section className='relative w-full lg:w-[790px] mx-auto text-white text-center z-10'>
           <h2 className='uppercase font-bold text-4xl lg:text-6xl leading-loose md:leading-[5rem] z-50'> Something awesome is coming soon </h2>
           <p className='text-[20px] font-light my-4'> Your all-in-one affiliate marketing tracking software <span className='font-medium'>track, automate</span> and <span className='font-medium'>optimize</span> your campaigns. </p>
         </section>
   
-        <section className='w-full md:w-[584px] mx-auto my-10'>
+        <section className='w-full md:w-[550px] mx-auto my-10'>
           <CountdownTimer targetDate={dateTimeAfterSevenDays} />
         </section>
   
-        <section className='w-full md:w-[584px] mx-auto my-10 flex justify-between'>
+        <section className='w-full md:w-[550px] mx-auto my-10 flex justify-evenly'>
           <div className='w-5/12'>
             <Input placeholder="first name" className="border-b-2 border-[#F6F7F9] text-white"/>
           </div>
@@ -39,20 +40,22 @@ const ComingSoon = () => {
   
         <section className='w-full md:w-[584px] mx-auto my-10 bg-white rounded-full flex justify-between items-center pl-5 h-12'>
           <div className='w-3/6'>
-            <Input placeholder="first name"/>
+            <Input placeholder="Enter your email address"/>
           </div>
           <div className='w-3/6 md:w-2/6 h-full'>
             <Button label="Join our waiting list" link="/"/>
           </div>
         </section>     
   
-        <section className='absolute h-[1000px] w-full -bottom-[49rem] mt-5 pt-16 translate-x-0 transform glass rounded-full z-50'>
+        <section className='absolute h-[1000px] w-full -bottom-[49rem] mt-5 pt-16 translate-x-0 transform glass rounded-full z-10'>
           <Footer/>
         </section>
   
-        <div className='absolute top-6 left-4 w-36 h-36 bg-gradient-to-b from-[#7F1E7B] to-[#19073B] rounded-full z-0'></div>
-        <div className='absolute top-32 right-16 w-32 h-32 bg-gradient-to-b from-[#213F72] to-[#19073B] rounded-full'></div>
+        <div className='absolute top-6 left-0 w-36 h-36 bg-gradient-to-b from-[#7F1E7B] to-[#19073B] rounded-full z-0'></div>
+        <div className='absolute top-32 right-0 w-32 h-32 bg-gradient-to-b from-[#213F72] to-[#19073B] rounded-full'></div>
         <div className='absolute bottom-20 left-28 w-40 h-40 bg-gradient-to-b from-[#7F4129] to-[#1C0C28] rounded-full'></div>
+
+        <Contact/>
       </div>
     )
 }
